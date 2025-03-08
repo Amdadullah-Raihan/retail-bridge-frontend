@@ -1,16 +1,16 @@
 import {} from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Entry from "./Entry";
-import Register from "./pages/auth/Register";
-import Dashboard from "./pages/dashboard/Dashboard";
+import Login from "./modules/auth/Login";
+import Dashboard from "./modules/dashboard/Dashboard";
 
 const Routers = () => {
-  const isAuth = true;
+  const isAuth = false;
   return (
     <Routes>
       <Route
         path="/auth/login"
-        element={!isAuth ? <Register /> : <Navigate to="/" />}
+        element={!isAuth ? <Login /> : <Navigate to="/" />}
       />
       <Route
         path="/"
